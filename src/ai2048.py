@@ -369,7 +369,7 @@ def play(depth,how='minimax',render=False):
 	if render:
 		clear_output(wait=True)
 		b.render()
-	while not b.is_done():
+	while b.able_to_merge():
 		if render:
 			clear_output(wait=True)
 			time.sleep(0.1)
@@ -383,13 +383,13 @@ def play(depth,how='minimax',render=False):
 			b.render()
 	return record,b.max_point()
 
-def train(epoch,render=False):
+def train(run,val=1024,render=False):
 	score_data = []
 	nice_record = []
-	for e in range(epoch):
+	for r in range(run):
 		record,score = play(6,render)
 		score_data.append(score)
-		if score >= 1024:
+		if score >= val:
 			nice_record.append(record)
 	return score_data,nice_record
 
