@@ -1,6 +1,8 @@
 # AI2048
 Repositori ini berisikan source code AI 2048 menggunakan algoritma minimax dan expectimax.
 
+https://user-images.githubusercontent.com/56197074/126901674-7b8ebd42-c755-4f4d-9e8f-d7bb0e46b765.mp4
+
 ## How To Use
 Berikut adalah cara untuk menggunakan source code AI 2048:
 
